@@ -1,0 +1,17 @@
+Problem Statement:
+Write a C++ program that implements Prim's algorithm to find the minimum spanning tree (MST) of a given undirected graph. The program should take input representing a set of points in a 2D plane and construct a weighted graph where each point is a vertex, and the weight of each edge is the Euclidean distance between the corresponding points. Finally, the program should output the weight of the minimum spanning tree.
+
+The program should include the following functionalities:
+1. Implement Prim's algorithm to find the minimum spanning tree of the input graph.
+2. Accept input for the number of points and their coordinates.
+3. Compute the distance between each pair of points to construct the weighted graph.
+4. Output the weight of the minimum spanning tree.
+
+The program should follow these steps:
+1. Accept the number of points from the user.
+2. Prompt the user to enter the x and y coordinates for each point.
+3. Construct the weighted graph based on the distances between points.
+4. Implement Prim's algorithm to find the minimum spanning tree.
+5. Output the weight of the minimum spanning tree.
+
+Note: The program should include necessary error handling and ensure efficient memory usage.
