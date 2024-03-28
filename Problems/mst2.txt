@@ -1,0 +1,4 @@
+https://www.geeksforgeeks.org/second-best-minimum-spanning-tree/
+
+Given a connected, undirected, and weighted graph, find the second-best Minimum Spanning Tree (MST). 
+The second-best MST is the MST with the smallest possible weight greater than the weight of the actual MST.

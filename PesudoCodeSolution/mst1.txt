@@ -1,0 +1,28 @@
+PrimsAlgorithm(Graph, StartNode):
+    Initialize an empty MST set
+    Initialize a key value array to store the minimum weight to reach each node
+    Initialize a parent array to store the parent of each node in the MST
+    Set the key value of the StartNode to 0
+    Set the key values of all other nodes to infinity
+    Create a priority queue to store vertices based on their key values
+
+    while not all nodes are in the MST set:
+        Extract the node with the minimum key value from the priority queue
+        Add the extracted node to the MST set
+        For each adjacent node of the extracted node:
+            If the weight of the edge is smaller than the current key value of the adjacent node:
+                Update the key value of the adjacent node
+                Update the parent of the adjacent node
+                Update the priority queue with the new key value of the adjacent node
+
+    Return the parent array representing the MST edges
+
+Main:
+    Read the number of nodes and edges in the graph
+    Read the edges and their weights
+    Construct the graph as an adjacency list
+
+    Select a start node
+    Call PrimsAlgorithm with the constructed graph and the start node
+    Compute the total weight of the MST using the parent array and edge weights
+    Print the weight of the minimum spanning tree

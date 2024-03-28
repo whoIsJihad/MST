@@ -1,0 +1,36 @@
+KruskalSecondBest(Edges, NumVertices):
+    Sort the edges in non-decreasing order of weight
+    Initialize an empty vector selected to store the indices of edges in the MST
+    Initialize answer to 0
+    Create a DisjointSet instance with NumVertices
+
+    For each edge in the sorted list of edges:
+        If the two vertices of the edge belong to different sets in the DisjointSet:
+            Add the index of the edge to the selected vector
+            Union the two vertices in the DisjointSet
+            Add the weight of the edge to answer
+
+    Initialize an empty vector mstVals to store the weights of alternative MSTs
+
+    For each edge index in the selected vector:
+        Create a new DisjointSet instance with NumVertices
+        Initialize mstVal to 0
+        For each edge in the sorted list of edges:
+            If the edge is not the current edge from the selected vector:
+                If the two vertices of the edge belong to different sets in the DisjointSet:
+                    Union the two vertices in the DisjointSet
+                    Add the weight of the edge to mstVal
+        Add mstVal to the mstVals vector
+
+    Return the minimum value from the mstVals vector
+
+Main:
+    Read the number of vertices (n) and the number of edges (m)
+    Initialize an empty vector Edges to store the edges
+
+    For each edge:
+        Read the two vertices (u, v) and the weight (w)
+        Add the edge (u, v, w) to the Edges vector
+
+    Call KruskalSecondBest with the Edges vector and the number of vertices (n)
+    Print the result (the weight of the second-best MST)
